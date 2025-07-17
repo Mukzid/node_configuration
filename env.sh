@@ -47,7 +47,7 @@ printf "${YELLOW}Initializing OPAM...${RESET}\n"
 opam init --disable-sandboxing -y
 opam switch create 5.2.1 -y || true
 opam switch 5.2.1
-eval $(opam env)
+eval "$(opam env)"
 
 printf "${YELLOW}Installing OCaml dependencies...${RESET}\n"
 opam install -y dune yojson lwt cohttp-lwt-unix ppx_deriving ocamlfind sqlite3 digestif base-threads
